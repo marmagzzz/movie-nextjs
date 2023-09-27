@@ -1,2 +1,38 @@
-.main {
+.headerContainer {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 56px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .headerDivContainer {
+        text-align: center;
+        color: #2aa04e;
+    }
+    background-color: #303842;
+}
+
+.sectionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+
+    .yearInputAndSearchContainer {
+        display: flex;
+    }
+}
+
+.inputYear {
+    padding: 8px;
+    // border-bottom: solid red;
+}
+
+.searchBtn {
+    margin: 0 8px;
+    padding: 8px;
 }

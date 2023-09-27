@@ -13,4 +13,6 @@ describe('Movie list home page - test suite', () => {
         expect(movieListComponent).toBeNull();
         expect(noResultComponent).toBeNull();
     });
+
+    // TODO: Test cases for movie searching
 });

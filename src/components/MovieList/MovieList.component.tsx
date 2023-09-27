@@ -1,4 +1,5 @@
 import { TMovie } from '@/types';
+import styles from './MovieList.module.scss';
 
 type TMovieListProps = {
     movies?: TMovie[];
@@ -11,11 +12,18 @@ export default function MovieList({ movies }: TMovieListProps) {
 
     // Display this when the TMovie is empty
     if (movies != undefined && movies.length <= 0) {
-        return <div data-test-id='no-result'>No Results Found</div>;
+        return (
+            <div
+                className={`${styles.movieListContainer}`}
+                data-test-id='no-result'
+            >
+                No Results Found
+            </div>
+        );
     }
 
     return (
-        <ul data-testid='movieList'>
+        <ul data-testid='movieList' className={`${styles.movieListContainer}`}>
             {movies.map((movie, index) => (
                 <li key={index}>{movie.Title}</li>
             ))}
