@@ -5,6 +5,7 @@ import styles from './page.module.scss';
 import { httpGetMoviesByYear } from '@/http';
 import MovieList from '@/components/MovieList/MovieList.component';
 import { TMovie } from '@/types';
+import Image from 'next/image';
 
 export default function Home() {
     const [movies, setMovies] = useState<TMovie[]>();
@@ -29,6 +30,12 @@ export default function Home() {
     return (
         <main className={styles.main}>
             <header className={`${styles.headerContainer}`}>
+                <Image
+                    className={`${styles.headerIcon}`}
+                    src='https://placehold.co/40x45/png'
+                    width={40}
+                    height={45}
+                />
                 <div className={`${styles.headerDivContainer}`}>Movie List</div>
             </header>
             <section className={`${styles.sectionContainer}`}>
